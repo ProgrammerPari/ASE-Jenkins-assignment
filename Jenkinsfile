@@ -24,12 +24,10 @@ pipeline {
 
 
         stage('Test') {
-            steps {
-                bat '''
-                pytest tests/
-                '''
-            }
-        }
+    steps {
+        bat 'C:\\Users\\USER\\AppData\\Local\\Programs\\Python\\Python310\\python.exe -m pytest tests/'
+    }
+}
 
         stage('Done') {
             steps {
