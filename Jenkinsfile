@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        PATH = "C:\\Windows\\System32;${env.PATH}"
+        PATH = "C:\\Python311;C:\\Python311\\Scripts;${env.PATH}"
         PYTHONPATH = "."
     }
 
@@ -16,6 +16,7 @@ pipeline {
         stage('Setup') {
             steps {
                 bat '''
+                python --version
                 python -m pip install --upgrade pip
                 pip install -r requirements.txt
                 '''
