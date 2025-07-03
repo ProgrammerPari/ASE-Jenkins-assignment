@@ -13,15 +13,15 @@ pipeline {
             }
         }
 
-        stage('Setup') {
-            steps {
-                bat '''
-                python --version
-                python -m pip install --upgrade pip
-                pip install -r requirements.txt
-                '''
-            }
-        }
+       stage('Setup') {
+    steps {
+        bat '''
+        C:\\Users\\USER\\AppData\\Local\\Programs\\Python\\Python310\\python.exe -m pip install --upgrade pip
+        C:\\Users\\USER\\AppData\\Local\\Programs\\Python\\Python310\\Scripts\\pip.exe install -r requirements.txt
+        '''
+    }
+}
+
 
         stage('Test') {
             steps {
